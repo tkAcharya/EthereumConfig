@@ -10,5 +10,5 @@ const source = fs.readFileSync(inboxPath,'utf8');
 
 //Since we are having only one contract so we can access the byte code
 //directly by using the below statement , note to understand please execute
-//line number 9 and check the log 
+//line number 9 and check the log
 module.exports = solc.compile(source,1).contracts[':Inbox'];
