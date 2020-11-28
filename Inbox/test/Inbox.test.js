@@ -13,16 +13,32 @@ const web3 = new Web3(ganache.provider());
 //   });
 // });
 
-beforeEach(() => {
+
+// This is the basic way of calling for accounts
+// beforeEach(() => {
+//   //Get a list of all accounts
+//   //Use one of them to deploy our contract
+//   web3.eth.getAccounts()
+//     .then(fetchedAccounts => {
+//       console.log(fetchedAccounts);
+//     })
+//   //Every funtion in web3 is asynchronous so need to use .then
+// });
+
+//In this method we are using async and await keywords to clean up the code
+//Creating a global var accounts
+
+let accounts;
+
+beforeEach(async () => {
   //Get a list of all accounts
   //Use one of them to deploy our contract
-  web3.eth.getAccounts()
-    .then(fetchedAccounts => {
-      console.log(fetchedAccounts);
-    })
+  accounts = await web3.eth.getAccounts();
   //Every funtion in web3 is asynchronous so need to use .then
 });
 
 describe('Inbox Account Verifiation', () => {
-  it('deploys a contract',() => {});
+  it('deploys a contract',() => {
+    console.log(accounts);;
+  });
 });
