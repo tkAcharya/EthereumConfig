@@ -6,17 +6,17 @@ Running the Program :
 
 1. Clone the project 
 
-``` git clone https://github.com/tkAcharya/Inbox-Ethereum-Code ```
+  ``` git clone https://github.com/tkAcharya/Inbox-Ethereum-Code ```
 
 2. Install the modules required for the project 
 
-``` npm install ```
+  ``` npm install ```
 
-``` npm install --save solc ganache-cli web3 mocha ```
+  ``` npm install --save solc ganache-cli web3 mocha ```
 
 3. Run the  test file 
 
-``` npm test ```
+  ``` npm test ```
 
 NOTE : This should give you a sample of addresses , and should run the basic tests present to verify the compilation and message modification
 
