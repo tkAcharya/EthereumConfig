@@ -4,11 +4,11 @@ Compilation , Building , Atomated testing , Deployment of ethereum project. My f
 
 Running the Program :
 
-**1. Clone the project **
+##1. Clone the project 
 
 ``` git clone https://github.com/tkAcharya/Inbox-Ethereum-Code ```
 
-**2. Install the modules required for the project **
+2. Install the modules required for the project 
 
 ``` npm install ```
 
