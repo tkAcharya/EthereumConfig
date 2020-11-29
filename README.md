@@ -1,28 +1,54 @@
+[![Build Status](https://travis-ci.org/sindresorhus/pageres.svg?branch=master)](https://travis-ci.org/sindresorhus/pageres.svg?branch=master)
 # EthereumAutomatedCompileDeploymentTest
 Compilation , Building , Atomated testing , Deployment of ethereum project. My first project in ethereum using solidity.
 
 
-Running the Program :
 
-1. Clone the project 
+### 1. Clone the project 
 
-  ``` git clone https://github.com/tkAcharya/Inbox-Ethereum-Code ```
+```sh
+$ git clone https://github.com/tkAcharya/Inbox-Ethereum-Code
+$ cd Inbox-Ethereum-Code/Inbox
+```
+  ```  ```
 
-2. Install the modules required for the project 
+### 2. Install the modules required for the project 
 
-  ``` npm install ```
+```sh
+$ npm install
+$ npm install --save solc ganache-cli web3 mocha
+```
+ 
 
-  ``` npm install --save solc ganache-cli web3 mocha ```
+### 3. Run the  test file 
 
-3. Run the  test file 
-
-  ``` npm test ```
+```sh
+$ npm test
+```
 
 NOTE : This should give you a sample of addresses , and should run the basic tests present to verify the compilation and message modification
 
+## Features
 
+- [x] Offline support
+- [x] Cross-platform
+- [x] Awesome sounds
+- [x] No singup/login required
+- [ ] Auto launch
+- [ ] Auto updates
 
-**If facing some issues : **
+## Ethereum Code Beautifiers for different editors
+- [Atom]( https://atom.io/packages/language-ethereum)
+- [Sublime]( https://packagecontrol.io/packages/Ethereum)
+- [VSCode]( https://github.com/juanfranblanco/vscode-solidity)
+- [Webstorm]( https://plugins.jetbrains.com/plugin/9475-intellij-solidity)
+- [VIM]( https://github.com/tomlion/vim-solidity)
+
+Learnt from [Udemy Course Link]( https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#### If facing some issues : 
 
 1. Always remove node_modules folder and then do <**node install updates**> to get all the dependencies
 
