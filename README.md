@@ -4,7 +4,7 @@ Compilation , Building , Atomated testing , Deployment of ethereum project. My f
 
 Running the Program :
 
-##1. Clone the project 
+1. Clone the project 
 
 ``` git clone https://github.com/tkAcharya/Inbox-Ethereum-Code ```
 
@@ -14,7 +14,7 @@ Running the Program :
 
 ``` npm install --save solc ganache-cli web3 mocha ```
 
-**3. Run the  test file **
+3. Run the  test file 
 
 ``` npm test ```
 
