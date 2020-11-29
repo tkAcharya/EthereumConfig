@@ -9,8 +9,13 @@ Now run <npm run test> to verify if the whole code is working
 
 
  --> Contracts : this contains .sol file mentioning our contract
+ 
  --> test : this contains the test.js file (using some mocha code)
+ 
  --> package.json : we keep this inside our root directory (have some script inside it , and it also captures different dependency being used)
+ 
  --> compile.js : compiles our soldity files (node compile.js)
+ 
  --> deploy.js : script file to take the compiled code and deploy it.
+ 
 --> Running the tests : npm run test
