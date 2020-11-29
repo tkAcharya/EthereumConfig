@@ -30,6 +30,7 @@ const {interface, bytecode} = require('../compile');
 
 let accounts;
 let inbox;
+const INITIAL_STRING = 'Hi There';
 
 beforeEach(async () => {
   //Get a list of all accounts
@@ -39,14 +40,30 @@ beforeEach(async () => {
 
   //Using accounts to deploy Inbox
   inbox = await new web3.eth.Contract(JSON.parse(interface))
-    .deploy({ data: bytecode , arguments: ['Hi there']})
+    .deploy({ data: bytecode , arguments: [INITIAL_STRING]})
     .send({ from: accounts[0], gas: '1000000'})
 });
 
 describe('Inbox Account Verifiation', () => {
-  it('deploys a contract',() => {
+  it('Verifying the Deployment',() => {
     console.log(accounts);
-    console.log("Inbox:")
-    console.log(inbox);
+    // console.log("Inbox:")
+    // console.log(inbox);
+    assert.ok(inbox.options.address); //Checks whether the Inbox address option is undefined or null -> fail
+  });
+
+  it('Verifying the default message',async () => {
+    //"methods" below returns an object that contains all the public functions in a contract
+    const message = await inbox.methods.message().call();
+    assert.equal(message , INITIAL_STRING);
+
+  });
+
+  it('Changing the message',async () => {
+    var localMessage = "ChangedTheMsg";
+    await inbox.methods.setMessage(localMessage).send({ from: accounts[0]});
+    const message = await inbox.methods.message().call();
+    assert.equal(message , localMessage);
+
   });
 });
