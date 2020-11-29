@@ -10,7 +10,6 @@ Compilation , Building , Atomated testing , Deployment of ethereum project. My f
 $ git clone https://github.com/tkAcharya/Inbox-Ethereum-Code
 $ cd Inbox-Ethereum-Code/Inbox
 ```
-  ```  ```
 
 ### 2. Install the modules required for the project 
 
