@@ -19,13 +19,37 @@ $ npm install --save solc ganache-cli web3 mocha
 ```
  
 
-### 3. Run the  test file 
+### 3. Run the test file 
 
 ```sh
 $ npm test
 ```
 
 NOTE : This should give you a sample of addresses , and should run the basic tests present to verify the compilation and message modification
+
+The below step is not required for local setup
+
+### 4. Deploy the Contract to Rinkeby Test Network
+ - Download and setup the [metamask extension](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en) of chrome (Store the passphrase with you)
+ - You need to create a free account on [infura.io](http://infura.io/)
+ - Create a project in the infura and store the endpoint for rinkeby network
+ - Install the following packages(if not present)
+  
+```sh
+$ npm install –-save truffle-hdwallet-provider@0.0.3
+$ npm install dotenv
+```
+ - Write the passphrase of metamask in the mnemonic field in .env file
+ - Write the rinkeby test network link in the link field in .env file
+ - Run ```node deploy.js```
+ 
+ ### 5. Verify the deployed Contract to Rinkeby Test Network
+ 
+ After running the deploy file , you would have got a message like "Contract Deployed to <XYZ>"
+ 
+ Copy the xyz and paste it in [rinkebyNetwork](https://rinkeby.etherscan.io/)
+ 
+ You will be able to view your contract info in the dashboard.
 
 ## Features
 
